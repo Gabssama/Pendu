@@ -232,7 +232,7 @@ function pendu(nbErreurs)		//la fonction dessin avec le nb d'erreurs en argument
 			ctx.fillStyle="red";
 			ctx.font="normal normal bold 25px arial";	
 			ctx.textAlign="center";
-			ctx.fillText("VOUS ETES MORTS...",200,50); // message amical en rouge au centre au dessus du pendu
+			ctx.fillText("VOUS ETES MORT...",200,50); // message amical en rouge au centre au dessus du pendu
 			
 			restart();					// on lance la fonction restart
 			break;
