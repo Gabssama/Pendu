@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+	<title>Le Pendu</title>
+	<meta charset="UTF-8">
+	<style>
+	#joueur1
+	{
+		visibility:visible;
+	}
+	
+	#joueur2
+	{
+		visibility:hidden;
+	}
+	#echaffaud
+	{
+		background-color:lightgrey;
+		position:fixed;
+		top:200px;
+		left:600px;
+		visibility:hidden;
+	}
+	#restart,#hell{
+		visibility:hidden;
+	}
+	</style>
+</head>
+<html>
+<body>
+<h1>LE PENDU</h1>
+
+<div id="joueur1" class="joueur">
+<h3>Entrez un mot</h3>
+<input type="text" id="motP1" autofocus />
+<input type="button" id="valider" value="Valider" />
+</div>
+
+<div id="joueur2" class="joueur">
+<h3>Entrez une lettre</h3>
+<input type="text" id="lettreP2" />
+<input type="button" id="tester" value="Tester" />
+</div>
+
+<p id="print"></p>
+<input type="button" id="restart" value="Recommencer"/>
+
+<div id="hell">
+<h2 id="win"></h2>
+<img src="giphy.gif" width="480" height="454" frameBorder="0" class="giphy-embed" />
+
+</div>
+
+<canvas id="echaffaud" width="400px" height="600px"></canvas>
+
+<script src="pendubis.js">
+</script>
+</body>
+</html>
