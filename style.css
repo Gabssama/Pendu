@@ -1,0 +1,26 @@
+/* feuille de style */ 
+
+#joueur1
+{
+    visibility:visible;
+}
+
+#joueur2
+{
+    visibility:hidden;
+}
+
+#echaffaud
+{
+    background-color:lightgrey;
+    margin:auto;
+    visibility:visible;
+}
+
+#restart,#hell{
+    visibility:hidden;
+}
+
+.print{
+    font-size:9rem;
+}
