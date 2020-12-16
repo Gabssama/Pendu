@@ -34,4 +34,6 @@ h1{
 body{
     background-image: url("western.jpg");
     background-size: cover;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
 }
