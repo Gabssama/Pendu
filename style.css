@@ -15,6 +15,7 @@
     background-color:lightgrey;
     margin:auto;
     visibility:visible;
+    opacity: 0.5;
 }
 
 #restart,#hell{
@@ -22,5 +23,15 @@
 }
 
 .print{
-    font-size:9rem;
+    font-size:8rem;
+}
+
+h1{
+    font-size:3rem !important;
+    background-color: rgba(38, 214, 61, 0.5);
+}
+
+body{
+    background-image: url("western.jpg");
+    background-size: cover;
 }
