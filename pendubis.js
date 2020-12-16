@@ -65,12 +65,14 @@ function joueur1(){
 	tableIn();
 	div1.style.visibility = "hidden";				// cache la saisie du mot
 	div2.style.visibility = "visible";			// affiche la barre de saisie de la lettre
+	
 	}
 	else
 	{
 		alert("Si tu veux pas jouer faut le dire"); //message d'erreur si le mot n'est pas conforme
 	}
 	print.innerHTML=newMot;						// affiche le mot à deviner sous forme d'underscore
+	print.classList.add("p-3");
 };
 
 function tableIn(){
@@ -165,26 +167,27 @@ function pendu(nbErreurs){		//la fonction dessin avec le nb d'erreurs en argumen
 	var canvas=document.getElementById("echaffaud");
 	var ctx=canvas.getContext("2d");
 	var tentatives="Il te reste : "+(10-nbErreurs)+" tentatives !";
+	var nbTentatives = document.getElementById("nbTentatives");
 	ctx.fillStyle="black";		// la couleur du pendu
 	switch (nbErreurs) 			// on dessine en fonction du nombre d'erreurs
 	{
 		case 1:					//une erreur
-			alert("Oups! Concentre-toi un peu !"+tentatives); //message en cas d'erreur
+			nbTentatives.innerHTML = "Oups! Concentre-toi un peu ! <br>"+tentatives; //message en cas d'erreur
 			ctx.fillRect(40,530,200,20); // la base
 			break;
 			
 		case 2:					// 2 erreurs
-			alert("Une faute de frappe ?"+tentatives); //message en cas d'erreur	
+			nbTentatives.innerHTML = "Une faute de frappe ? <br>"+tentatives; //message en cas d'erreur	
 			ctx.fillRect(110,90,20,450); //le support vertical
 			break;
 			
 		case 3:					// 3 erreurs
-			alert("Essaie la touche à côté..."+tentatives); //message en cas d'erreur
+			nbTentatives.innerHTML = "Essaie la touche à côté...<br>"+tentatives; //message en cas d'erreur
 			ctx.fillRect(130,90,150,20); // la barre horizontale
 			break;
 			
 		case 4:					// 4 erreurs
-			alert("Encore un peu tu vas trouver, t'as essayé le E ? "+tentatives); //message en cas d'erreur
+			nbTentatives.innerHTML = "Encore un peu tu vas trouver, t'as essayé le E ? <br>"+tentatives; //message en cas d'erreur
 			ctx.beginPath();
 			ctx.moveTo(110,160);	// l'équerre
 			ctx.lineTo(180,90);
@@ -202,28 +205,28 @@ function pendu(nbErreurs){		//la fonction dessin avec le nb d'erreurs en argumen
 			break;
 			
 		case 5:						// 5 erreurs
-			alert("Le point de non retour..."+tentatives); //message en cas d'erreur
+			nbTentatives.innerHTML = "Le point de non retour...<br>"+tentatives; //message en cas d'erreur
 			ctx.fillRect(230,90,20,80);	//la corde
 			break;
 		
 		case 6:
-			alert("Tu le fais exprès avoue ?"+tentatives); //message en cas d'erreur
+			nbTentatives.innerHTML = "Tu le fais exprès avoue ?<br>"+tentatives; //message en cas d'erreur
 			ctx.beginPath()
 			ctx.arc(240,210,40,0,2*Math.PI);
 			ctx.stroke(); 						// tete
 			break;
 		case 7:
-			alert("Le 7... ton chiffre porte-bonheur ?"+tentatives); //message en cas d'erreur
+			nbTentatives.innerHTML = "Le 7... ton chiffre porte-bonheur ?<br>"+tentatives; //message en cas d'erreur
 			ctx.fillRect(230,260,20,160); // corps
 			break;
 			
 		case 8:
-			alert("Ca sent le roussi non ?"+tentatives); //message en cas d'erreur
+			nbTentatives.innerHTML = "Ca sent le roussi non ?<br>"+tentatives; //message en cas d'erreur
 			ctx.fillRect(190,300,100,20); // bras
 			break;
 						
 		case 9:
-			alert("Ton adversaire est en train de sortir le champagne..."+tentatives); //message en cas d'erreur
+			nbTentatives.innerHTML = "Ton adversaire est en train de sortir le champagne...<br>"+tentatives; //message en cas d'erreur
 			ctx.beginPath();				// la jambre droite
 			ctx.moveTo(235,420);
 			ctx.lineTo(190,515);
@@ -233,7 +236,7 @@ function pendu(nbErreurs){		//la fonction dessin avec le nb d'erreurs en argumen
 			break;
 			
 		case 10:
-			alert("Perdu! T'es mauvais Jack..."); //message en cas d'erreur
+			nbTentatives.innerHTML = "Perdu! T'es mauvais Jack... <br>"+tentatives; //message en cas d'erreur
 			ctx.beginPath();
 			ctx.moveTo(245,420);			// la jambre gauche
 			ctx.lineTo(290,515);
