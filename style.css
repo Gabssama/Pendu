@@ -10,6 +10,11 @@
     visibility:hidden;
 }
 
+#lettreP2
+{
+    width:2em;
+}
+
 #echaffaud
 {
     background-color:lightgrey;
