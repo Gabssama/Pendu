@@ -32,7 +32,7 @@ var printWin=document.getElementById("win");		// variable pour afficher du texte
 	
 	var motP1=document.getElementById("motP1");	
 	var regex=/([a-z]{1,26})/;						
-	motP1.onkeyup = clicEntrer;					//presser entrer pour valider son mot
+	motP1.onkeydown = clicEntrer;					//presser entrer pour valider son mot
 	
 
 	function clicEntrer (e)
