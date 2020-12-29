@@ -7,3 +7,7 @@ Le premier joueur saisit le mot à faire deviner du nombre de lettres voulu.
 Le deuxième joueur saisit une lettre à chaque tour. Il possède en tout 10 tentatives. 
 
 Il est possible d'appuyer sur Entrer pour valider le mot ou les lettres pour une expèrience plus fluide. 
+
+Deux bugs : 
+- il est possible de saisir des caractères non autorisés en tapant vite sur le clavier car c'est une méthode keyup
+- il est possible de valider un mot "vide" 
