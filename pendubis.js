@@ -44,7 +44,7 @@ var printWin=document.getElementById("win");		// variable pour afficher du texte
 			document.getElementById("lettreP2").focus();
 			
 		}
-		if(regex.test(e.key) === 0)
+		if(regex.test(e.key) == 0)
 		{	
 			e.preventDefault();
 			alert("Veuillez entrer un mot composé uniquement de lettres minuscules.");
